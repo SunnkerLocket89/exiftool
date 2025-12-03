@@ -103,6 +103,7 @@ def run_exiftool_metadata_dump(
     largefile_support: bool = True,
     recursive: bool = True,
     exiftool_cmd: str = "exiftool",
+    force: bool = False,
 ) -> None:
     """Run ExifTool and write metadata to the provided CSV path."""
 
@@ -118,6 +119,11 @@ def run_exiftool_metadata_dump(
         )
 
     if resolved_output.exists():
+        if not force:
+            raise FileExistsError(
+                f"Output file already exists: {resolved_output}. "
+                "Use --force to overwrite."
+            )
         resolved_output.unlink()
 
     cmd = build_exiftool_command(
@@ -187,6 +193,12 @@ def parse_args(argv: Sequence[str] | None = None) -> argparse.Namespace:
         default="exiftool",
         help="ExifTool executable to invoke (default: 'exiftool').",
     )
+    parser.add_argument(
+        "-f",
+        "--force",
+        action="store_true",
+        help="Overwrite the output file if it already exists.",
+    )
     return parser.parse_args(argv)
 
 
@@ -201,6 +213,7 @@ def main(argv: Sequence[str] | None = None) -> int:
             largefile_support=not args.no_largefile_support,
             recursive=not args.no_recursive,
             exiftool_cmd=args.exiftool_cmd,
+            force=args.force,
         )
     except Exception as exc:  # noqa: BLE001 - surface clear CLI error message
         print(f"Error: {exc}", file=sys.stderr)
