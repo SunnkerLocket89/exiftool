@@ -1,0 +1,344 @@
+[ExifTool, ExifTool, ExifTool] ExifToolVersion - ExifTool Version Number: 13.42
+[File, System, Other] FileName - File Name: video0_h264_undefined_lang.json
+[File, System, Other] Directory - Directory: t/images
+[File, System, Other] FileSize - File Size: 7.9 kB
+[File, System, Time] FileModifyDate - File Modification Date/Time: 2026:01:11 23:39:40+00:00
+[File, System, Time] FileAccessDate - File Access Date/Time: 2026:01:11 23:39:40+00:00
+[File, System, Time] FileInodeChangeDate - File Inode Change Date/Time: 2026:01:11 23:39:40+00:00
+[File, System, Other] FilePermissions - File Permissions: -rw-r--r--
+[File, File, Other] FileType - File Type: JSON
+[File, File, Other] FileTypeExtension - File Type Extension: json
+[File, File, Other] MIMEType - MIME Type: application/json
+[JSON, JSON, Other] title - Title: Metadata of video0_h264_undefined_lang
+[JSON, JSON, Other] checksum - Checksum: 4ea1b5cbdb42c9b431466da5fda972a0
+[JSON, JSON, Other] FileName - File Name: video0_h264_undefined_lang.mp4
+[JSON, JSON, Other] FileSize - File Size: 441 MB
+[JSON, JSON, Other] FileType - File Type: MP4
+[JSON, JSON, Other] FileTypeExtension - File Type Extension: mp4
+[JSON, JSON, Other] MIMEType - MIME Type: video/mp4
+[JSON, JSON, Other] MajorBrand - Major Brand: MP4 Base Media v1 [IS0 14496-12:2003]
+[JSON, JSON, Other] MinorVersion - Minor Version: 0.2.0
+[JSON, JSON, Other] CompatibleBrands - Compatible Brands: [{editable=false,key_formatted=0,value=isom},{editable=false,key_formatted=1,value=iso2},{editable=false,key_formatted=2,value=avc1},{editable=false,key_formatted=3,value=mp41}]
+[JSON, JSON, Other] CompatibleBrandsEditable - Compatible Brands Editable: false, false, false, false
+[JSON, JSON, Other] CompatibleBrandsKey_Formatted - Compatible Brands Key Formatted: 0, 1, 2, 3
+[JSON, JSON, Other] CompatibleBrandsValue - Compatible Brands Value: isom, iso2, avc1, mp41
+[JSON, JSON, Other] MediaDataSize - Media Data Size: 440800254
+[JSON, JSON, Other] MediaDataOffset - Media Data Offset: 48
+[JSON, JSON, Other] MovieHeaderVersion - Movie Header Version: 0
+[JSON, JSON, Other] CreateDate - Create Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] ModifyDate - Modify Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] TimeScale - Time Scale: 1000
+[JSON, JSON, Other] Duration - Duration: 1:00:00
+[JSON, JSON, Other] PreferredRate - Preferred Rate: 1
+[JSON, JSON, Other] PreferredVolume - Preferred Volume: 100.00%
+[JSON, JSON, Other] PreviewTime - Preview Time: 0 s
+[JSON, JSON, Other] PreviewDuration - Preview Duration: 0 s
+[JSON, JSON, Other] PosterTime - Poster Time: 0 s
+[JSON, JSON, Other] SelectionTime - Selection Time: 0 s
+[JSON, JSON, Other] SelectionDuration - Selection Duration: 0 s
+[JSON, JSON, Other] CurrentTime - Current Time: 0 s
+[JSON, JSON, Other] NextTrackID - Next Track ID: 2
+[JSON, JSON, Other] TrackHeaderVersion - Track Header Version: 0
+[JSON, JSON, Other] TrackCreateDate - Track Create Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] TrackModifyDate - Track Modify Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] TrackID - Track ID: 1
+[JSON, JSON, Other] TrackDuration - Track Duration: 1:00:00
+[JSON, JSON, Other] TrackLayer - Track Layer: 0
+[JSON, JSON, Other] TrackVolume - Track Volume: 0.00%
+[JSON, JSON, Other] MatrixStructure - Matrix Structure: 1 0 0 0 1 0 0 0 1
+[JSON, JSON, Other] ImageWidth - Image Width: 640
+[JSON, JSON, Other] ImageHeight - Image Height: 480
+[JSON, JSON, Other] MediaHeaderVersion - Media Header Version: 0
+[JSON, JSON, Other] MediaCreateDate - Media Create Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] MediaModifyDate - Media Modify Date: 0000:00:00 00:00:00
+[JSON, JSON, Other] MediaTimeScale - Media Time Scale: 19128
+[JSON, JSON, Other] MediaDuration - Media Duration: 1:00:00
+[JSON, JSON, Other] MediaLanguageCode - Media Language Code: und
+[JSON, JSON, Other] HandlerDescription - Handler Description: ISO Media file produced by Google Inc.
+[JSON, JSON, Other] GraphicsMode - Graphics Mode: srcCopy
+[JSON, JSON, Other] OpColor - Op Color: 0 0 0
+[JSON, JSON, Other] CompressorID - Compressor ID: avc1
+[JSON, JSON, Other] SourceImageWidth - Source Image Width: 640
+[JSON, JSON, Other] SourceImageHeight - Source Image Height: 480
+[JSON, JSON, Other] XResolution - X Resolution: 72
+[JSON, JSON, Other] YResolution - Y Resolution: 72
+[JSON, JSON, Other] BitDepth - Bit Depth: 24
+[JSON, JSON, Other] ColorProfiles - Color Profiles: nclx
+[JSON, JSON, Other] ColorPrimaries - Color Primaries: BT.709
+[JSON, JSON, Other] TransferCharacteristics - Transfer Characteristics: BT.709
+[JSON, JSON, Other] MatrixCoefficients - Matrix Coefficients: BT.709
+[JSON, JSON, Other] PixelAspectRatio - Pixel Aspect Ratio: 1:1
+[JSON, JSON, Other] BufferSize - Buffer Size: 0
+[JSON, JSON, Other] MaxBitrate - Max Bitrate: 979499
+[JSON, JSON, Other] AverageBitrate - Average Bitrate: 979499
+[JSON, JSON, Other] VideoFrameRate - Video Frame Rate: 11.955
+[JSON, JSON, Other] HandlerType - Handler Type: Metadata
+[JSON, JSON, Other] HandlerVendorID - Handler Vendor ID: Apple
+[JSON, JSON, Other] Encoder - Encoder: Lavf62.6.103
+[JSON, JSON, Other] ImageSize - Image Size: 640x480
+[JSON, JSON, Other] Megapixels - Megapixels: 0.307
+[JSON, JSON, Other] AvgBitrate - Avg Bitrate: 979 kbps
+[JSON, JSON, Other] Rotation - Rotation: 0
+[JSON, JSON, Other] Category - Category: video
+[JSON, JSON, Other] streams - Streams: {index={editable=null,key_formatted=index,value=0},codec_name={editable=null,key_formatted=codec_name,value=h264},codec_long_name={editable=null,key_formatted=codec_long_name,value=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10},profile={editable=null,key_formatted=profile,value=Main},codec_type={editable=null,key_formatted=codec_type,value=video},codec_tag_string={editable=null,key_formatted=codec_tag_string,value=avc1},codec_tag={editable=null,key_formatted=codec_tag,value=0x31637661},width={editable=null,key_formatted=width,value=640},height={editable=null,key_formatted=height,value=480},coded_width={editable=null,key_formatted=coded_width,value=640},coded_height={editable=null,key_formatted=coded_height,value=480},has_b_frames={editable=null,key_formatted=has_b_frames,value=1},sample_aspect_ratio={editable=null,key_formatted=sample_aspect_ratio,value=1:1},display_aspect_ratio={editable=null,key_formatted=display_aspect_ratio,value=4:3},pix_fmt={editable=null,key_formatted=pix_fmt,value=yuv420p},level={editable=null,key_formatted=level,value=22},color_range={editable=null,key_formatted=color_range,value=tv},color_space={editable=null,key_formatted=color_space,value=bt709},color_transfer={editable=null,key_formatted=color_transfer,value=bt709},color_primaries={editable=null,key_formatted=color_primaries,value=bt709},chroma_location={editable=null,key_formatted=chroma_location,value=left},field_order={editable=null,key_formatted=field_order,value=progressive},refs={editable=null,key_formatted=refs,value=1},is_avc={editable=null,key_formatted=is_avc,value=true},nal_length_size={editable=null,key_formatted=nal_length_size,value=4},id={editable=null,key_formatted=id,value=0x1},r_frame_rate={editable=null,key_formatted=r_frame_rate,value=2391/200},avg_frame_rate={editable=null,key_formatted=avg_frame_rate,value=411644124/34432399},time_base={editable=null,key_formatted=time_base,value=1/19128},start_pts={editable=null,key_formatted=start_pts,value=0},start_time={editable=null,key_formatted=start_time,value=0},duration_ts={editable=null,key_formatted=duration_ts,value=68864798},duration={editable=null,key_formatted=duration,value=3600.209013},bit_rate={editable=null,key_formatted=bit_rate,value=979499},bits_per_raw_sample={editable=null,key_formatted=bits_per_raw_sample,value=8},nb_frames={editable=null,key_formatted=nb_frames,value=43041},extradata_size={editable=null,key_formatted=extradata_size,value=42},disposition={default={editable=null,key_formatted=default,value=1},dub={editable=null,key_formatted=dub,value=0},original={editable=null,key_formatted=original,value=0},comment={editable=null,key_formatted=comment,value=0},lyrics={editable=null,key_formatted=lyrics,value=0},karaoke={editable=null,key_formatted=karaoke,value=0},forced={editable=null,key_formatted=forced,value=0},hearing_impaired={editable=null,key_formatted=hearing_impaired,value=0},visual_impaired={editable=null,key_formatted=visual_impaired,value=0},clean_effects={editable=null,key_formatted=clean_effects,value=0},attached_pic={editable=null,key_formatted=attached_pic,value=0},timed_thumbnails={editable=null,key_formatted=timed_thumbnails,value=0},non_diegetic={editable=null,key_formatted=non_diegetic,value=0},captions={editable=null,key_formatted=captions,value=0},descriptions={editable=null,key_formatted=descriptions,value=0},metadata={editable=null,key_formatted=metadata,value=0},dependent={editable=null,key_formatted=dependent,value=0},still_image={editable=null,key_formatted=still_image,value=0},multilayer={editable=null,key_formatted=multilayer,value=0}},tags={language={editable=null,key_formatted=language,value=und},handler_name={editable=null,key_formatted=handler_name,value=ISO Media file produced by Google Inc.},vendor_id={editable=null,key_formatted=vendor_id,value=[0][0][0][0]}}}
+[JSON, JSON, Other] streamsIndex - Streams Index: {editable=null,key_formatted=index,value=0}
+[JSON, JSON, Other] streamsIndexEditable - Streams Index Editable: null
+[JSON, JSON, Other] streamsIndexKey_Formatted - Streams Index Key Formatted: index
+[JSON, JSON, Other] streamsIndexValue - Streams Index Value: 0
+[JSON, JSON, Other] streamsCodec_Name - Streams Codec Name: {editable=null,key_formatted=codec_name,value=h264}
+[JSON, JSON, Other] streamsCodec_NameEditable - Streams Codec Name Editable: null
+[JSON, JSON, Other] streamsCodec_NameKey_Formatted - Streams Codec Name Key Formatted: codec_name
+[JSON, JSON, Other] streamsCodec_NameValue - Streams Codec Name Value: h264
+[JSON, JSON, Other] streamsCodec_Long_Name - Streams Codec Long Name: {editable=null,key_formatted=codec_long_name,value=H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10}
+[JSON, JSON, Other] streamsCodec_Long_NameEditable - Streams Codec Long Name Editable: null
+[JSON, JSON, Other] streamsCodec_Long_NameKey_Formatted - Streams Codec Long Name Key Formatted: codec_long_name
+[JSON, JSON, Other] streamsCodec_Long_NameValue - Streams Codec Long Name Value: H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10
+[JSON, JSON, Other] streamsProfile - Streams Profile: {editable=null,key_formatted=profile,value=Main}
+[JSON, JSON, Other] streamsProfileEditable - Streams Profile Editable: null
+[JSON, JSON, Other] streamsProfileKey_Formatted - Streams Profile Key Formatted: profile
+[JSON, JSON, Other] streamsProfileValue - Streams Profile Value: Main
+[JSON, JSON, Other] streamsCodec_Type - Streams Codec Type: {editable=null,key_formatted=codec_type,value=video}
+[JSON, JSON, Other] streamsCodec_TypeEditable - Streams Codec Type Editable: null
+[JSON, JSON, Other] streamsCodec_TypeKey_Formatted - Streams Codec Type Key Formatted: codec_type
+[JSON, JSON, Other] streamsCodec_TypeValue - Streams Codec Type Value: video
+[JSON, JSON, Other] streamsCodec_Tag_String - Streams Codec Tag String: {editable=null,key_formatted=codec_tag_string,value=avc1}
+[JSON, JSON, Other] streamsCodec_Tag_StringEditable - Streams Codec Tag String Editable: null
+[JSON, JSON, Other] streamsCodec_Tag_StringKey_Formatted - Streams Codec Tag String Key Formatted: codec_tag_string
+[JSON, JSON, Other] streamsCodec_Tag_StringValue - Streams Codec Tag String Value: avc1
+[JSON, JSON, Other] streamsCodec_Tag - Streams Codec Tag: {editable=null,key_formatted=codec_tag,value=0x31637661}
+[JSON, JSON, Other] streamsCodec_TagEditable - Streams Codec Tag Editable: null
+[JSON, JSON, Other] streamsCodec_TagKey_Formatted - Streams Codec Tag Key Formatted: codec_tag
+[JSON, JSON, Other] streamsCodec_TagValue - Streams Codec Tag Value: 0x31637661
+[JSON, JSON, Other] streamsWidth - Streams Width: {editable=null,key_formatted=width,value=640}
+[JSON, JSON, Other] streamsWidthEditable - Streams Width Editable: null
+[JSON, JSON, Other] streamsWidthKey_Formatted - Streams Width Key Formatted: width
+[JSON, JSON, Other] streamsWidthValue - Streams Width Value: 640
+[JSON, JSON, Other] streamsHeight - Streams Height: {editable=null,key_formatted=height,value=480}
+[JSON, JSON, Other] streamsHeightEditable - Streams Height Editable: null
+[JSON, JSON, Other] streamsHeightKey_Formatted - Streams Height Key Formatted: height
+[JSON, JSON, Other] streamsHeightValue - Streams Height Value: 480
+[JSON, JSON, Other] streamsCoded_Width - Streams Coded Width: {editable=null,key_formatted=coded_width,value=640}
+[JSON, JSON, Other] streamsCoded_WidthEditable - Streams Coded Width Editable: null
+[JSON, JSON, Other] streamsCoded_WidthKey_Formatted - Streams Coded Width Key Formatted: coded_width
+[JSON, JSON, Other] streamsCoded_WidthValue - Streams Coded Width Value: 640
+[JSON, JSON, Other] streamsCoded_Height - Streams Coded Height: {editable=null,key_formatted=coded_height,value=480}
+[JSON, JSON, Other] streamsCoded_HeightEditable - Streams Coded Height Editable: null
+[JSON, JSON, Other] streamsCoded_HeightKey_Formatted - Streams Coded Height Key Formatted: coded_height
+[JSON, JSON, Other] streamsCoded_HeightValue - Streams Coded Height Value: 480
+[JSON, JSON, Other] streamsHas_B_Frames - Streams Has B Frames: {editable=null,key_formatted=has_b_frames,value=1}
+[JSON, JSON, Other] streamsHas_B_FramesEditable - Streams Has B Frames Editable: null
+[JSON, JSON, Other] streamsHas_B_FramesKey_Formatted - Streams Has B Frames Key Formatted: has_b_frames
+[JSON, JSON, Other] streamsHas_B_FramesValue - Streams Has B Frames Value: 1
+[JSON, JSON, Other] streamsSample_Aspect_Ratio - Streams Sample Aspect Ratio: {editable=null,key_formatted=sample_aspect_ratio,value=1:1}
+[JSON, JSON, Other] streamsSample_Aspect_RatioEditable - Streams Sample Aspect Ratio Editable: null
+[JSON, JSON, Other] streamsSample_Aspect_RatioKey_Formatted - Streams Sample Aspect Ratio Key Formatted: sample_aspect_ratio
+[JSON, JSON, Other] streamsSample_Aspect_RatioValue - Streams Sample Aspect Ratio Value: 1:1
+[JSON, JSON, Other] streamsDisplay_Aspect_Ratio - Streams Display Aspect Ratio: {editable=null,key_formatted=display_aspect_ratio,value=4:3}
+[JSON, JSON, Other] streamsDisplay_Aspect_RatioEditable - Streams Display Aspect Ratio Editable: null
+[JSON, JSON, Other] streamsDisplay_Aspect_RatioKey_Formatted - Streams Display Aspect Ratio Key Formatted: display_aspect_ratio
+[JSON, JSON, Other] streamsDisplay_Aspect_RatioValue - Streams Display Aspect Ratio Value: 4:3
+[JSON, JSON, Other] streamsPix_Fmt - Streams Pix Fmt: {editable=null,key_formatted=pix_fmt,value=yuv420p}
+[JSON, JSON, Other] streamsPix_FmtEditable - Streams Pix Fmt Editable: null
+[JSON, JSON, Other] streamsPix_FmtKey_Formatted - Streams Pix Fmt Key Formatted: pix_fmt
+[JSON, JSON, Other] streamsPix_FmtValue - Streams Pix Fmt Value: yuv420p
+[JSON, JSON, Other] streamsLevel - Streams Level: {editable=null,key_formatted=level,value=22}
+[JSON, JSON, Other] streamsLevelEditable - Streams Level Editable: null
+[JSON, JSON, Other] streamsLevelKey_Formatted - Streams Level Key Formatted: level
+[JSON, JSON, Other] streamsLevelValue - Streams Level Value: 22
+[JSON, JSON, Other] streamsColor_Range - Streams Color Range: {editable=null,key_formatted=color_range,value=tv}
+[JSON, JSON, Other] streamsColor_RangeEditable - Streams Color Range Editable: null
+[JSON, JSON, Other] streamsColor_RangeKey_Formatted - Streams Color Range Key Formatted: color_range
+[JSON, JSON, Other] streamsColor_RangeValue - Streams Color Range Value: tv
+[JSON, JSON, Other] streamsColor_Space - Streams Color Space: {editable=null,key_formatted=color_space,value=bt709}
+[JSON, JSON, Other] streamsColor_SpaceEditable - Streams Color Space Editable: null
+[JSON, JSON, Other] streamsColor_SpaceKey_Formatted - Streams Color Space Key Formatted: color_space
+[JSON, JSON, Other] streamsColor_SpaceValue - Streams Color Space Value: bt709
+[JSON, JSON, Other] streamsColor_Transfer - Streams Color Transfer: {editable=null,key_formatted=color_transfer,value=bt709}
+[JSON, JSON, Other] streamsColor_TransferEditable - Streams Color Transfer Editable: null
+[JSON, JSON, Other] streamsColor_TransferKey_Formatted - Streams Color Transfer Key Formatted: color_transfer
+[JSON, JSON, Other] streamsColor_TransferValue - Streams Color Transfer Value: bt709
+[JSON, JSON, Other] streamsColor_Primaries - Streams Color Primaries: {editable=null,key_formatted=color_primaries,value=bt709}
+[JSON, JSON, Other] streamsColor_PrimariesEditable - Streams Color Primaries Editable: null
+[JSON, JSON, Other] streamsColor_PrimariesKey_Formatted - Streams Color Primaries Key Formatted: color_primaries
+[JSON, JSON, Other] streamsColor_PrimariesValue - Streams Color Primaries Value: bt709
+[JSON, JSON, Other] streamsChroma_Location - Streams Chroma Location: {editable=null,key_formatted=chroma_location,value=left}
+[JSON, JSON, Other] streamsChroma_LocationEditable - Streams Chroma Location Editable: null
+[JSON, JSON, Other] streamsChroma_LocationKey_Formatted - Streams Chroma Location Key Formatted: chroma_location
+[JSON, JSON, Other] streamsChroma_LocationValue - Streams Chroma Location Value: left
+[JSON, JSON, Other] streamsField_Order - Streams Field Order: {editable=null,key_formatted=field_order,value=progressive}
+[JSON, JSON, Other] streamsField_OrderEditable - Streams Field Order Editable: null
+[JSON, JSON, Other] streamsField_OrderKey_Formatted - Streams Field Order Key Formatted: field_order
+[JSON, JSON, Other] streamsField_OrderValue - Streams Field Order Value: progressive
+[JSON, JSON, Other] streamsRefs - Streams Refs: {editable=null,key_formatted=refs,value=1}
+[JSON, JSON, Other] streamsRefsEditable - Streams Refs Editable: null
+[JSON, JSON, Other] streamsRefsKey_Formatted - Streams Refs Key Formatted: refs
+[JSON, JSON, Other] streamsRefsValue - Streams Refs Value: 1
+[JSON, JSON, Other] streamsIs_Avc - Streams Is Avc: {editable=null,key_formatted=is_avc,value=true}
+[JSON, JSON, Other] streamsIs_AvcEditable - Streams Is Avc Editable: null
+[JSON, JSON, Other] streamsIs_AvcKey_Formatted - Streams Is Avc Key Formatted: is_avc
+[JSON, JSON, Other] streamsIs_AvcValue - Streams Is Avc Value: true
+[JSON, JSON, Other] streamsNal_Length_Size - Streams Nal Length Size: {editable=null,key_formatted=nal_length_size,value=4}
+[JSON, JSON, Other] streamsNal_Length_SizeEditable - Streams Nal Length Size Editable: null
+[JSON, JSON, Other] streamsNal_Length_SizeKey_Formatted - Streams Nal Length Size Key Formatted: nal_length_size
+[JSON, JSON, Other] streamsNal_Length_SizeValue - Streams Nal Length Size Value: 4
+[JSON, JSON, Other] streamsId - Streams Id: {editable=null,key_formatted=id,value=0x1}
+[JSON, JSON, Other] streamsIdEditable - Streams Id Editable: null
+[JSON, JSON, Other] streamsIdKey_Formatted - Streams Id Key Formatted: id
+[JSON, JSON, Other] streamsIdValue - Streams Id Value: 0x1
+[JSON, JSON, Other] streamsR_Frame_Rate - Streams R Frame Rate: {editable=null,key_formatted=r_frame_rate,value=2391/200}
+[JSON, JSON, Other] streamsR_Frame_RateEditable - Streams R Frame Rate Editable: null
+[JSON, JSON, Other] streamsR_Frame_RateKey_Formatted - Streams R Frame Rate Key Formatted: r_frame_rate
+[JSON, JSON, Other] streamsR_Frame_RateValue - Streams R Frame Rate Value: 2391/200
+[JSON, JSON, Other] streamsAvg_Frame_Rate - Streams Avg Frame Rate: {editable=null,key_formatted=avg_frame_rate,value=411644124/34432399}
+[JSON, JSON, Other] streamsAvg_Frame_RateEditable - Streams Avg Frame Rate Editable: null
+[JSON, JSON, Other] streamsAvg_Frame_RateKey_Formatted - Streams Avg Frame Rate Key Formatted: avg_frame_rate
+[JSON, JSON, Other] streamsAvg_Frame_RateValue - Streams Avg Frame Rate Value: 411644124/34432399
+[JSON, JSON, Other] streamsTime_Base - Streams Time Base: {editable=null,key_formatted=time_base,value=1/19128}
+[JSON, JSON, Other] streamsTime_BaseEditable - Streams Time Base Editable: null
+[JSON, JSON, Other] streamsTime_BaseKey_Formatted - Streams Time Base Key Formatted: time_base
+[JSON, JSON, Other] streamsTime_BaseValue - Streams Time Base Value: 1/19128
+[JSON, JSON, Other] streamsStart_Pts - Streams Start Pts: {editable=null,key_formatted=start_pts,value=0}
+[JSON, JSON, Other] streamsStart_PtsEditable - Streams Start Pts Editable: null
+[JSON, JSON, Other] streamsStart_PtsKey_Formatted - Streams Start Pts Key Formatted: start_pts
+[JSON, JSON, Other] streamsStart_PtsValue - Streams Start Pts Value: 0
+[JSON, JSON, Other] streamsStart_Time - Streams Start Time: {editable=null,key_formatted=start_time,value=0}
+[JSON, JSON, Other] streamsStart_TimeEditable - Streams Start Time Editable: null
+[JSON, JSON, Other] streamsStart_TimeKey_Formatted - Streams Start Time Key Formatted: start_time
+[JSON, JSON, Other] streamsStart_TimeValue - Streams Start Time Value: 0
+[JSON, JSON, Other] streamsDuration_Ts - Streams Duration Ts: {editable=null,key_formatted=duration_ts,value=68864798}
+[JSON, JSON, Other] streamsDuration_TsEditable - Streams Duration Ts Editable: null
+[JSON, JSON, Other] streamsDuration_TsKey_Formatted - Streams Duration Ts Key Formatted: duration_ts
+[JSON, JSON, Other] streamsDuration_TsValue - Streams Duration Ts Value: 68864798
+[JSON, JSON, Other] streamsDuration - Streams Duration: {editable=null,key_formatted=duration,value=3600.209013}
+[JSON, JSON, Other] streamsDurationEditable - Streams Duration Editable: null
+[JSON, JSON, Other] streamsDurationKey_Formatted - Streams Duration Key Formatted: duration
+[JSON, JSON, Other] streamsDurationValue - Streams Duration Value: 3600.209013
+[JSON, JSON, Other] streamsBit_Rate - Streams Bit Rate: {editable=null,key_formatted=bit_rate,value=979499}
+[JSON, JSON, Other] streamsBit_RateEditable - Streams Bit Rate Editable: null
+[JSON, JSON, Other] streamsBit_RateKey_Formatted - Streams Bit Rate Key Formatted: bit_rate
+[JSON, JSON, Other] streamsBit_RateValue - Streams Bit Rate Value: 979499
+[JSON, JSON, Other] streamsBits_Per_Raw_Sample - Streams Bits Per Raw Sample: {editable=null,key_formatted=bits_per_raw_sample,value=8}
+[JSON, JSON, Other] streamsBits_Per_Raw_SampleEditable - Streams Bits Per Raw Sample Editable: null
+[JSON, JSON, Other] streamsBits_Per_Raw_SampleKey_Formatted - Streams Bits Per Raw Sample Key Formatted: bits_per_raw_sample
+[JSON, JSON, Other] streamsBits_Per_Raw_SampleValue - Streams Bits Per Raw Sample Value: 8
+[JSON, JSON, Other] streamsNb_Frames - Streams Nb Frames: {editable=null,key_formatted=nb_frames,value=43041}
+[JSON, JSON, Other] streamsNb_FramesEditable - Streams Nb Frames Editable: null
+[JSON, JSON, Other] streamsNb_FramesKey_Formatted - Streams Nb Frames Key Formatted: nb_frames
+[JSON, JSON, Other] streamsNb_FramesValue - Streams Nb Frames Value: 43041
+[JSON, JSON, Other] streamsExtradata_Size - Streams Extradata Size: {editable=null,key_formatted=extradata_size,value=42}
+[JSON, JSON, Other] streamsExtradata_SizeEditable - Streams Extradata Size Editable: null
+[JSON, JSON, Other] streamsExtradata_SizeKey_Formatted - Streams Extradata Size Key Formatted: extradata_size
+[JSON, JSON, Other] streamsExtradata_SizeValue - Streams Extradata Size Value: 42
+[JSON, JSON, Other] streamsDisposition - Streams Disposition: {default={editable=null,key_formatted=default,value=1},dub={editable=null,key_formatted=dub,value=0},original={editable=null,key_formatted=original,value=0},comment={editable=null,key_formatted=comment,value=0},lyrics={editable=null,key_formatted=lyrics,value=0},karaoke={editable=null,key_formatted=karaoke,value=0},forced={editable=null,key_formatted=forced,value=0},hearing_impaired={editable=null,key_formatted=hearing_impaired,value=0},visual_impaired={editable=null,key_formatted=visual_impaired,value=0},clean_effects={editable=null,key_formatted=clean_effects,value=0},attached_pic={editable=null,key_formatted=attached_pic,value=0},timed_thumbnails={editable=null,key_formatted=timed_thumbnails,value=0},non_diegetic={editable=null,key_formatted=non_diegetic,value=0},captions={editable=null,key_formatted=captions,value=0},descriptions={editable=null,key_formatted=descriptions,value=0},metadata={editable=null,key_formatted=metadata,value=0},dependent={editable=null,key_formatted=dependent,value=0},still_image={editable=null,key_formatted=still_image,value=0},multilayer={editable=null,key_formatted=multilayer,value=0}}
+[JSON, JSON, Other] streamsDispositionDefault - Streams Disposition Default: {editable=null,key_formatted=default,value=1}
+[JSON, JSON, Other] streamsDispositionDefaultEditable - Streams Disposition Default Editable: null
+[JSON, JSON, Other] streamsDispositionDefaultKey_Formatted - Streams Disposition Default Key Formatted: default
+[JSON, JSON, Other] streamsDispositionDefaultValue - Streams Disposition Default Value: 1
+[JSON, JSON, Other] streamsDispositionDub - Streams Disposition Dub: {editable=null,key_formatted=dub,value=0}
+[JSON, JSON, Other] streamsDispositionDubEditable - Streams Disposition Dub Editable: null
+[JSON, JSON, Other] streamsDispositionDubKey_Formatted - Streams Disposition Dub Key Formatted: dub
+[JSON, JSON, Other] streamsDispositionDubValue - Streams Disposition Dub Value: 0
+[JSON, JSON, Other] streamsDispositionOriginal - Streams Disposition Original: {editable=null,key_formatted=original,value=0}
+[JSON, JSON, Other] streamsDispositionOriginalEditable - Streams Disposition Original Editable: null
+[JSON, JSON, Other] streamsDispositionOriginalKey_Formatted - Streams Disposition Original Key Formatted: original
+[JSON, JSON, Other] streamsDispositionOriginalValue - Streams Disposition Original Value: 0
+[JSON, JSON, Other] streamsDispositionComment - Streams Disposition Comment: {editable=null,key_formatted=comment,value=0}
+[JSON, JSON, Other] streamsDispositionCommentEditable - Streams Disposition Comment Editable: null
+[JSON, JSON, Other] streamsDispositionCommentKey_Formatted - Streams Disposition Comment Key Formatted: comment
+[JSON, JSON, Other] streamsDispositionCommentValue - Streams Disposition Comment Value: 0
+[JSON, JSON, Other] streamsDispositionLyrics - Streams Disposition Lyrics: {editable=null,key_formatted=lyrics,value=0}
+[JSON, JSON, Other] streamsDispositionLyricsEditable - Streams Disposition Lyrics Editable: null
+[JSON, JSON, Other] streamsDispositionLyricsKey_Formatted - Streams Disposition Lyrics Key Formatted: lyrics
+[JSON, JSON, Other] streamsDispositionLyricsValue - Streams Disposition Lyrics Value: 0
+[JSON, JSON, Other] streamsDispositionKaraoke - Streams Disposition Karaoke: {editable=null,key_formatted=karaoke,value=0}
+[JSON, JSON, Other] streamsDispositionKaraokeEditable - Streams Disposition Karaoke Editable: null
+[JSON, JSON, Other] streamsDispositionKaraokeKey_Formatted - Streams Disposition Karaoke Key Formatted: karaoke
+[JSON, JSON, Other] streamsDispositionKaraokeValue - Streams Disposition Karaoke Value: 0
+[JSON, JSON, Other] streamsDispositionForced - Streams Disposition Forced: {editable=null,key_formatted=forced,value=0}
+[JSON, JSON, Other] streamsDispositionForcedEditable - Streams Disposition Forced Editable: null
+[JSON, JSON, Other] streamsDispositionForcedKey_Formatted - Streams Disposition Forced Key Formatted: forced
+[JSON, JSON, Other] streamsDispositionForcedValue - Streams Disposition Forced Value: 0
+[JSON, JSON, Other] streamsDispositionHearing_Impaired - Streams Disposition Hearing Impaired: {editable=null,key_formatted=hearing_impaired,value=0}
+[JSON, JSON, Other] streamsDispositionHearing_ImpairedEditable - Streams Disposition Hearing Impaired Editable: null
+[JSON, JSON, Other] streamsDispositionHearing_ImpairedKey_Formatted - Streams Disposition Hearing Impaired Key Formatted: hearing_impaired
+[JSON, JSON, Other] streamsDispositionHearing_ImpairedValue - Streams Disposition Hearing Impaired Value: 0
+[JSON, JSON, Other] streamsDispositionVisual_Impaired - Streams Disposition Visual Impaired: {editable=null,key_formatted=visual_impaired,value=0}
+[JSON, JSON, Other] streamsDispositionVisual_ImpairedEditable - Streams Disposition Visual Impaired Editable: null
+[JSON, JSON, Other] streamsDispositionVisual_ImpairedKey_Formatted - Streams Disposition Visual Impaired Key Formatted: visual_impaired
+[JSON, JSON, Other] streamsDispositionVisual_ImpairedValue - Streams Disposition Visual Impaired Value: 0
+[JSON, JSON, Other] streamsDispositionClean_Effects - Streams Disposition Clean Effects: {editable=null,key_formatted=clean_effects,value=0}
+[JSON, JSON, Other] streamsDispositionClean_EffectsEditable - Streams Disposition Clean Effects Editable: null
+[JSON, JSON, Other] streamsDispositionClean_EffectsKey_Formatted - Streams Disposition Clean Effects Key Formatted: clean_effects
+[JSON, JSON, Other] streamsDispositionClean_EffectsValue - Streams Disposition Clean Effects Value: 0
+[JSON, JSON, Other] streamsDispositionAttached_Pic - Streams Disposition Attached Pic: {editable=null,key_formatted=attached_pic,value=0}
+[JSON, JSON, Other] streamsDispositionAttached_PicEditable - Streams Disposition Attached Pic Editable: null
+[JSON, JSON, Other] streamsDispositionAttached_PicKey_Formatted - Streams Disposition Attached Pic Key Formatted: attached_pic
+[JSON, JSON, Other] streamsDispositionAttached_PicValue - Streams Disposition Attached Pic Value: 0
+[JSON, JSON, Other] streamsDispositionTimed_Thumbnails - Streams Disposition Timed Thumbnails: {editable=null,key_formatted=timed_thumbnails,value=0}
+[JSON, JSON, Other] streamsDispositionTimed_ThumbnailsEditable - Streams Disposition Timed Thumbnails Editable: null
+[JSON, JSON, Other] streamsDispositionTimed_ThumbnailsKey_Formatted - Streams Disposition Timed Thumbnails Key Formatted: timed_thumbnails
+[JSON, JSON, Other] streamsDispositionTimed_ThumbnailsValue - Streams Disposition Timed Thumbnails Value: 0
+[JSON, JSON, Other] streamsDispositionNon_Diegetic - Streams Disposition Non Diegetic: {editable=null,key_formatted=non_diegetic,value=0}
+[JSON, JSON, Other] streamsDispositionNon_DiegeticEditable - Streams Disposition Non Diegetic Editable: null
+[JSON, JSON, Other] streamsDispositionNon_DiegeticKey_Formatted - Streams Disposition Non Diegetic Key Formatted: non_diegetic
+[JSON, JSON, Other] streamsDispositionNon_DiegeticValue - Streams Disposition Non Diegetic Value: 0
+[JSON, JSON, Other] streamsDispositionCaptions - Streams Disposition Captions: {editable=null,key_formatted=captions,value=0}
+[JSON, JSON, Other] streamsDispositionCaptionsEditable - Streams Disposition Captions Editable: null
+[JSON, JSON, Other] streamsDispositionCaptionsKey_Formatted - Streams Disposition Captions Key Formatted: captions
+[JSON, JSON, Other] streamsDispositionCaptionsValue - Streams Disposition Captions Value: 0
+[JSON, JSON, Other] streamsDispositionDescriptions - Streams Disposition Descriptions: {editable=null,key_formatted=descriptions,value=0}
+[JSON, JSON, Other] streamsDispositionDescriptionsEditable - Streams Disposition Descriptions Editable: null
+[JSON, JSON, Other] streamsDispositionDescriptionsKey_Formatted - Streams Disposition Descriptions Key Formatted: descriptions
+[JSON, JSON, Other] streamsDispositionDescriptionsValue - Streams Disposition Descriptions Value: 0
+[JSON, JSON, Other] streamsDispositionMetadata - Streams Disposition Metadata: {editable=null,key_formatted=metadata,value=0}
+[JSON, JSON, Other] streamsDispositionMetadataEditable - Streams Disposition Metadata Editable: null
+[JSON, JSON, Other] streamsDispositionMetadataKey_Formatted - Streams Disposition Metadata Key Formatted: metadata
+[JSON, JSON, Other] streamsDispositionMetadataValue - Streams Disposition Metadata Value: 0
+[JSON, JSON, Other] streamsDispositionDependent - Streams Disposition Dependent: {editable=null,key_formatted=dependent,value=0}
+[JSON, JSON, Other] streamsDispositionDependentEditable - Streams Disposition Dependent Editable: null
+[JSON, JSON, Other] streamsDispositionDependentKey_Formatted - Streams Disposition Dependent Key Formatted: dependent
+[JSON, JSON, Other] streamsDispositionDependentValue - Streams Disposition Dependent Value: 0
+[JSON, JSON, Other] streamsDispositionStill_Image - Streams Disposition Still Image: {editable=null,key_formatted=still_image,value=0}
+[JSON, JSON, Other] streamsDispositionStill_ImageEditable - Streams Disposition Still Image Editable: null
+[JSON, JSON, Other] streamsDispositionStill_ImageKey_Formatted - Streams Disposition Still Image Key Formatted: still_image
+[JSON, JSON, Other] streamsDispositionStill_ImageValue - Streams Disposition Still Image Value: 0
+[JSON, JSON, Other] streamsDispositionMultilayer - Streams Disposition Multilayer: {editable=null,key_formatted=multilayer,value=0}
+[JSON, JSON, Other] streamsDispositionMultilayerEditable - Streams Disposition Multilayer Editable: null
+[JSON, JSON, Other] streamsDispositionMultilayerKey_Formatted - Streams Disposition Multilayer Key Formatted: multilayer
+[JSON, JSON, Other] streamsDispositionMultilayerValue - Streams Disposition Multilayer Value: 0
+[JSON, JSON, Other] streamsTags - Streams Tags: {language={editable=null,key_formatted=language,value=und},handler_name={editable=null,key_formatted=handler_name,value=ISO Media file produced by Google Inc.},vendor_id={editable=null,key_formatted=vendor_id,value=[0][0][0][0]}}
+[JSON, JSON, Other] streamsTagsLanguage - Streams Tags Language: {editable=null,key_formatted=language,value=und}
+[JSON, JSON, Other] streamsTagsLanguageEditable - Streams Tags Language Editable: null
+[JSON, JSON, Other] streamsTagsLanguageKey_Formatted - Streams Tags Language Key Formatted: language
+[JSON, JSON, Other] streamsTagsLanguageValue - Streams Tags Language Value: und
+[JSON, JSON, Other] streamsTagsHandler_Name - Streams Tags Handler Name: {editable=null,key_formatted=handler_name,value=ISO Media file produced by Google Inc.}
+[JSON, JSON, Other] streamsTagsHandler_NameEditable - Streams Tags Handler Name Editable: null
+[JSON, JSON, Other] streamsTagsHandler_NameKey_Formatted - Streams Tags Handler Name Key Formatted: handler_name
+[JSON, JSON, Other] streamsTagsHandler_NameValue - Streams Tags Handler Name Value: ISO Media file produced by Google Inc.
+[JSON, JSON, Other] streamsTagsVendor_Id - Streams Tags Vendor Id: {editable=null,key_formatted=vendor_id,value=[0][0][0][0]}
+[JSON, JSON, Other] streamsTagsVendor_IdEditable - Streams Tags Vendor Id Editable: null
+[JSON, JSON, Other] streamsTagsVendor_IdKey_Formatted - Streams Tags Vendor Id Key Formatted: vendor_id
+[JSON, JSON, Other] streamsTagsVendor_IdValue - Streams Tags Vendor Id Value: [0][0][0][0]
+[JSON, JSON, Other] format - Format: [{editable=null,key_formatted=nb_streams,value=1},{editable=null,key_formatted=nb_programs,value=0},{editable=null,key_formatted=nb_stream_groups,value=0},{editable=null,key_formatted=format_name,value=mov,mp4,m4a,3gp,3g2,mj2},{editable=null,key_formatted=format_long_name,value=QuickTime / MOV},{editable=null,key_formatted=start_time,value=0},{editable=null,key_formatted=duration,value=3600.209013},{editable=null,key_formatted=size,value=441099825},{editable=null,key_formatted=bit_rate,value=980164},{editable=null,key_formatted=probe_score,value=100},{major_brand={editable=null,key_formatted=major_brand,value=isom},minor_version={editable=null,key_formatted=minor_version,value=512},compatible_brands={editable=null,key_formatted=compatible_brands,value=isomiso2avc1mp41},encoder={editable=null,key_formatted=encoder,value=Lavf62.6.103}}]
+[JSON, JSON, Other] formatEditable - Format Editable: null, null, null, null, null, null, null, null, null, null
+[JSON, JSON, Other] formatKey_Formatted - Format Key Formatted: nb_streams, nb_programs, nb_stream_groups, format_name, format_long_name, start_time, duration, size, bit_rate, probe_score
+[JSON, JSON, Other] formatValue - Format Value: 1, 0, 0, mov,mp4,m4a,3gp,3g2,mj2, QuickTime / MOV, 0, 3600.209013, 441099825, 980164, 100
+[JSON, JSON, Other] formatMajor_Brand - Format Major Brand: {editable=null,key_formatted=major_brand,value=isom}
+[JSON, JSON, Other] formatMajor_BrandEditable - Format Major Brand Editable: null
+[JSON, JSON, Other] formatMajor_BrandKey_Formatted - Format Major Brand Key Formatted: major_brand
+[JSON, JSON, Other] formatMajor_BrandValue - Format Major Brand Value: isom
+[JSON, JSON, Other] formatMinor_Version - Format Minor Version: {editable=null,key_formatted=minor_version,value=512}
+[JSON, JSON, Other] formatMinor_VersionEditable - Format Minor Version Editable: null
+[JSON, JSON, Other] formatMinor_VersionKey_Formatted - Format Minor Version Key Formatted: minor_version
+[JSON, JSON, Other] formatMinor_VersionValue - Format Minor Version Value: 512
+[JSON, JSON, Other] formatCompatible_Brands - Format Compatible Brands: {editable=null,key_formatted=compatible_brands,value=isomiso2avc1mp41}
+[JSON, JSON, Other] formatCompatible_BrandsEditable - Format Compatible Brands Editable: null
+[JSON, JSON, Other] formatCompatible_BrandsKey_Formatted - Format Compatible Brands Key Formatted: compatible_brands
+[JSON, JSON, Other] formatCompatible_BrandsValue - Format Compatible Brands Value: isomiso2avc1mp41
+[JSON, JSON, Other] formatEncoder - Format Encoder: {editable=null,key_formatted=encoder,value=Lavf62.6.103}
+[JSON, JSON, Other] formatEncoderEditable - Format Encoder Editable: null
+[JSON, JSON, Other] formatEncoderKey_Formatted - Format Encoder Key Formatted: encoder
+[JSON, JSON, Other] formatEncoderValue - Format Encoder Value: Lavf62.6.103
+[JSON, JSON, Other] raw_header - Raw header: 00 00 00 20 66 74 79 70 69 73 6F 6D 00 00 02 00 69 73 6F 6D 69 73 6F 32 61 76 63 31 6D 70 34 31 00 00 00 08 66 72 65 65 1A 46 14 06 6D 64 61 74 00 00 00 29 06 05 25 A4 DC F5 3F 13 0A 29 1C 9B D6 1A C0 02 E6 BD AB 31 30 39 34 30 37 30 37 30 37 35 33 37 32 38 36 35 35 31 34 00 80 00 01 37 82 25 B8 40 0B 7F F3 3B EA 3A F3 D9 05 97 B1 C7 20 93 C9 18 4C 98 3B 54 E8 82 3E 5E B6 96 7F 27
+[Composite, Composite, Image] Exif-ImageSize - Image Size: 640x480
+[Composite, Composite, Image] Exif-Megapixels - Megapixels: 0.307
