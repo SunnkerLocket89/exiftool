@@ -29,6 +29,7 @@ sub ReadToNested($;$);
 sub ProcessDict($$$$;$$);
 sub ProcessAcroForm($$$$;$$);
 sub ExpandArray($);
+sub ResolveArrayRefs($$$);
 sub ReadPDFValue($);
 sub CheckPDF($$$);
 
@@ -1823,6 +1824,29 @@ sub ExpandArray($)
 }
 
 #------------------------------------------------------------------------------
+# Resolve indirect object references inside arrays
+# Inputs: 0) ExifTool object reference, 1) cross-reference table reference
+#         2) array reference
+# Return: new array reference with indirect object references resolved
+sub ResolveArrayRefs($$$)
+{
+    my ($et, $xref, $val) = @_;
+    my @resolved;
+    foreach my $item (@$val) {
+        if (ref $item eq 'SCALAR') {
+            my $prevFetched = $lastFetched;
+            my $obj = FetchObject($et, $$item, $xref, 'Array');
+            $item = $obj if defined $obj;
+            $lastFetched = $prevFetched;
+        } elsif (ref $item eq 'ARRAY') {
+            $item = ResolveArrayRefs($et, $xref, $item);
+        }
+        push @resolved, $item;
+    }
+    return \@resolved;
+}
+
+#------------------------------------------------------------------------------
 # Process PDF dictionary extract tag values
 # Inputs: 0) ExifTool object reference, 1) tag table reference
 #         2) dictionary reference, 3) cross-reference table reference,
@@ -2072,6 +2096,7 @@ sub ProcessDict($$$$;$$)
                     $lastFetched = $prevFetched; # restore last fetched object reference
                 }
             } else {
+                $val = ResolveArrayRefs($et, $xref, $val) if ref $val eq 'ARRAY';
                 $val = ReadPDFValue($val);
             }
             if (ref $val) {
