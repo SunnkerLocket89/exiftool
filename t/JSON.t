@@ -2,7 +2,7 @@
 # After "make install" it should work as "perl t/JSON.t".
 
 BEGIN {
-    $| = 1; print "1..2\n"; $Image::ExifTool::configFile = '';
+    $| = 1; print "1..3\n"; $Image::ExifTool::configFile = '';
     require './t/TestLib.pm'; t::TestLib->import();
 }
 END {print "not ok 1\n" unless $loaded;}
@@ -23,6 +23,17 @@ my $testnum = 1;
     $exifTool->Options(Struct => 2);
     $exifTool->Options(MissingTagValue => 'null');
     my $info = $exifTool->ImageInfo('t/images/JSON.json');
+    notOK() unless check($exifTool, $info, $testname, $testnum);
+    print "ok $testnum\n";
+}
+
+# test 3: Extract information from video0_h264_undefined_lang.json
+{
+    ++$testnum;
+    my $exifTool = Image::ExifTool->new;
+    $exifTool->Options(Struct => 2);
+    $exifTool->Options(MissingTagValue => 'null');
+    my $info = $exifTool->ImageInfo('t/images/video0_h264_undefined_lang.json');
     notOK() unless check($exifTool, $info, $testname, $testnum);
     print "ok $testnum\n";
 }

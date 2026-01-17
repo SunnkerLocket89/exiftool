@@ -92,6 +92,12 @@ sub ProcessTag($$$$%)
     my ($et, $tagTablePtr, $tag, $val, %flags) = @_;
 
     if (ref $val eq 'HASH') {
+        my $unwrap = exists $$val{value} &&
+            not grep { $_ ne 'value' && $_ ne 'editable' && $_ ne 'key_formatted' } keys %$val;
+        if ($unwrap) {
+            ProcessTag($et, $tagTablePtr, $tag, $$val{value}, %flags);
+            return;
+        }
         if ($et->Options('Struct')) {
             FoundTag($et, $tagTablePtr, $tag, $val, %flags, Struct => 1);
             return unless $et->Options('Struct') > 1;
@@ -199,4 +205,3 @@ L<Image::ExifTool::TagNames/JSON Tags>,
 L<Image::ExifTool(3pm)|Image::ExifTool>
 
 =cut
-
