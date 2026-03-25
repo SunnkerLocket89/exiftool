@@ -4,8 +4,150 @@ ExifTool Version History
 
 RSS feed: https://exiftool.org/rss.xml
 
-Note: The most recent production release is Version 13.36. (Other versions are
+Note: The most recent production release is Version 13.50. (Other versions are
 considered development releases, and are not uploaded to MetaCPAN.)
+
+Mar. 19, 2026 - Version 13.53
+
+  - Added ability to read FileCreateDate (btime) on Linux systems
+  - Added a bunch more Sony lenses (thanks Jos Roost)
+  - Added warnings for possibly malicious or corrupted LNK files (github #401)
+  - Decode timed GPS from Kenwood DRV-A510W MP4 videos
+  - Decode more information from LNK files
+  - Reduced memory requirements when running on a large number of files,
+    particularly when the -U option is used
+  - Patched a potential security issue in Windows version
+  - Fixed possible "undefined value" runtime warnings when reading torrent and
+    WPG files (thanks Raf)
+  - Fixed issue which could result in an "uninitialized value" runtime error
+    when parsing corrupted CBOR information
+
+Feb. 27, 2026 - Version 13.52
+
+  - Added a number of new XMP tags written by Adobe software
+  - Added UTF-16 support for a few different metadata types in which only UCS-2
+    was previously implemented (github #396)
+  - Added a few more Canon FlashModel values and decode FlashModel for the
+    5DmkII (thanks Peter Wem, github #390)
+  - Added a new Canon LensType (github #395)
+  - Added some missing file attribute bits to two of the new LNK tags
+  - Decode internal serial number for the 5DmkII (thanks Peter Wem, github #398)
+  - Decode another OwnerName for the 5DmkII (thanks Peter Wem, github #397)
+  - Decode some timed GPS for a couple of new DJI drones
+  - Enable WindowsLongPath by default only if Win32::API is available
+  - Renamed the Pentax K3III AFInfo tag to AFInfoK3III
+
+Feb. 19, 2026 - Version 13.51
+
+  - Added a new Nikon LensID (thanks Johan)
+  - Decode more tags from Windows LNK files
+  - Decode another LIGOGPSINFO variant (github #394)
+  - Decode some new Canon tags (thanks Peter Wem, github #389, #390, #393)
+  - Decode some new Nikon tags
+  - Split decoding on Nikon BurstGroupID into separate tags
+  - Fixed round-off error in GPSDateTime seconds for camm6 metadata in MP4
+    videos introduced in 13.45
+  - Fixed bug generating the default-language version of
+    QuickTime:LocationInformation (github #391)
+
+Feb. 7, 2026 - Version 13.50 (production release)
+
+  - Added a few new Sony lenses (thanks Jos Roost)
+  - Added a couple of new Canon lenses (thanks Norbert Wasser)
+  - Decode another Samsung trailer tag
+  - Decode BlackLevels from some Canon CRW files (github #387)
+  - Updated Sony maker note decoding for the ILCE-7M5 (thanks Jos Roost)
+  - Patched potential MacOS security issue (thanks Tay Kiat Loong)
+  - Fixed -list options so reading image files beforehand doesn't add tags to
+    the output when running multiple commands using the -execute feature
+
+Feb. 3, 2026 - Version 13.49
+
+  - Decode a couple of new Samsung trailer tags
+  - Disabled decoding of MenuSettings for the Nikon Z6III firmware 2.0 until the
+    changes can be worked through in detail
+  - Fixed problem where Google Photos had problems displaying ExifTool-edited
+    HEIC MotionPhoto images.  Files written by older versions of ExifTool may be
+    repaired by re-writing with 13.49 or later
+
+Jan. 31, 2026 - Version 13.48
+
+  - Added a new Nikon LensID (github #385)
+  - Added support for quoted entries in input -geotag CSV files
+  - Fixed decoding of Nikon Z6III menu settings for firmware 2.0 update
+  - Fixed -fast2 to avoid processing maker notes in some QuickTime-based files
+  - Fixed bug introduced in version 13.46 where some tags may be associated with
+    the next fix when geotagging from GPX files
+
+Jan. 27, 2026 - Version 13.47
+
+  - Enhanced -fast option to avoid scanning QuickTime MediaData for metadata
+    (improves performance when reading CR3 files from slow media, github #384)
+    and -fast2 to avoid reading HDRP maker notes
+  - Fixed hang problem when reading HDRPMakerNotes from some Google phones
+  - API Changes:
+      - Added CSV support to GeoUserTag option
+
+Jan. 25, 2026 - Version 13.46
+
+  - Added a new Pentax LensType
+  - Decode some new Canon tags (github #380)
+  - Renamed a newly added Canon tag (thanks Martin Chvatal)
+  - Improved identification of Canon RF lenses in edited images when an extender
+    was used
+  - Changed description of FocalLength35efl to add "35mm Equiv"
+  - Patched -validate option to recognize DNG 1.7.1 tags
+  - Patched to remove maker note error/warning when writing files from some
+    Google phones (github #377)
+  - Patched to improve warning for corrupted HEIC files downloaded from
+    heic.digital, and added ability to delete this garbage when writing
+    (github #361 and #378)
+  - Fixed minor error when writing some DJI DNG files
+  - API Changes:
+      - Added GeoUserTag option
+
+Dec. 26, 2025 - Version 13.45
+
+  - Added a number of new values for some Sony tags (thanks Milos Komarcevic)
+  - Added a few new button functions for the Nikon Z9 (thanks Warren Hatch)
+  - Added some Nikon subject detection values (thanks Warren Hatch)
+  - Added a new Canon SubjectSwitching value
+  - Decode Ricoh APP7 maker notes
+  - Patched to allow a specific PreviewImage to be written to a DNG file
+    containing multiple previews
+  - Fixed bug reading large Protobuf integers on 32-bit systems (github #373)
+  - Fixed minor error when writing some DJI DNG files
+  - API Changes:
+      - Added SystemTimeRes option
+
+Dec. 15, 2025 - Version 13.44 (production release)
+
+  - Added read support for Kandao KVAR files
+  - Added a few new Panasonic tags (github #365)
+  - Added a new XMP-crs tag
+  - Added a few new Matroska tags
+  - Added a few values related to the new RAW file types for the Sony ILCE-7M5
+    (thanks Milos Komarcevic)
+  - Decode a few new PhaseOne tags (github #372)
+  - Decode timed GPS and other metadata from Kandao MP4 videos
+  - Improvements to family 1 and 5 groups for tags in Matroska videos, and
+    prioritize top-level tags when duplicates exist
+  - Assume a default TimecodeScale of 1ms for MKV videos
+  - Patched to avoid runtime warning when parsing corrupted QuickTime data
+    (thanks Neal Krawetz)
+  - Fixed decoding of ShutterCount for Sony ILCE-7M5  (github #369)
+
+Dec. 4, 2025 - Version 13.43
+
+  - Added support for a couple of new Android QuickTime Keys tags
+  - Added date/time conversion for RIFF DateCreated
+  - Added ability to read/write (but not create/delete) the HEIF Mirroring tag
+  - Added a new SonyModelID
+  - Added a new Canon LensType (thanks Matthias)
+  - Decode ShutterCount for the Canon EOS R6 Mark III
+  - Decode another Samsung trailer tag
+  - Convert invalid Panasonic AFPointPosition to 'n/a'
+  - Fixed issue extracting timed GPS from some Wolfbox G900 MP4 videos
 
 Nov. 17, 2025 - Version 13.42
 

@@ -88,7 +88,7 @@ sub ProcessCTMD($$$);
 sub ProcessExifInfo($$$);
 sub SwapWords($);
 
-$VERSION = '4.99';
+$VERSION = '5.05';
 
 # Note: Removed 'USM' from 'L' lenses since it is redundant - PH
 # (or is it?  Ref 32 shows 5 non-USM L-type lenses)
@@ -492,6 +492,7 @@ $VERSION = '4.99';
    '368.12' => 'Sigma 18-35mm f/1.8 DC HSM | A', #50
    '368.13' => 'Sigma 24-105mm f/4 DG OS HSM | A', #forum3833
    '368.14' => 'Sigma 18-300mm f/3.5-6.3 DC Macro OS HSM | C', #forum15280 (014)
+   '368.15' => 'Sigma 24mm F1.4 DG HSM | A', #50 (015)
     # Note: LensType 488 (0x1e8) is reported as 232 (0xe8) in 7D CameraSettings
     488 => 'Canon EF-S 15-85mm f/3.5-5.6 IS USM', #PH
     489 => 'Canon EF 70-300mm f/4-5.6L IS USM', #Gerald Kapounek
@@ -538,6 +539,8 @@ $VERSION = '4.99';
     754 => 'Canon EF 70-200mm f/4L IS II USM', #IB
     757 => 'Canon EF 400mm f/2.8L IS III USM', #IB
     758 => 'Canon EF 600mm f/4L IS III USM', #IB
+
+    923 => 'Meike/SKY 85mm f/1.8 DCM', #github395
 
     1136 => 'Sigma 24-70mm f/2.8 DG OS HSM | A', #IB (017)
     # (STM lenses - 0x10xx)
@@ -644,6 +647,8 @@ $VERSION = '4.99';
    '61182.64' => 'Canon RF 20mm F1.4 L VCM', #42
    '61182.65' => 'Canon RF 85mm F1.4 L VCM', #github350
    '61182.66' => 'Canon RF 45mm F1.2 STM', #42
+   '61182.67' => 'Canon RF 7-14mm F2.8-3.5 L FISHEYE STM', #42
+   '61182.68' => 'Canon RF 14mm F1.4 L VCM', #42
     65535 => 'n/a',
 );
 
@@ -1017,6 +1022,29 @@ $VERSION = '4.99';
     0x80000518 => 'EOS R6 Mark III', #42
     0x80000520 => 'EOS D2000C', #IB
     0x80000560 => 'EOS D6000C', #PH (guess)
+);
+
+# flash models (github390)
+my %flashModel = (
+    0 => 'n/a',
+  # 1 - seen this for various PowerShot/IXUS models
+    4 => 'Speedlite 540EZ',
+    5 => 'Speedlite 380EX',
+    6 => 'Speedlite 550EX',
+    8 => 'Speedlite ST-E2',
+    9 => 'Speedlite MR-14EX',
+    12 => 'Speedlite 580EX',
+    13 => 'Speedlite 430EX',
+    17 => 'Speedlite 580EX II',
+    18 => 'Speedlite 430EX II',
+    22 => 'Speedlite 600EX-RT',
+    23 => 'Speedlite 600EX II-RT',
+    24 => 'Speedlite 90EX',
+    25 => 'Speedlite 430EX III-RT',
+    31 => 'Speedlite EL-1 ver2',
+    33 => 'Speedlite EL-5',
+    34 => 'Speedlite EL-10',
+  # 127 - seen a lot, currently ignored
 );
 
 my %canonQuality = (
@@ -1422,6 +1450,11 @@ my %offOn = ( 0 => 'Off', 1 => 'On' );
             Name => 'CanonCameraInfoR6m2',
             Condition => '$$self{Model} =~ /\bEOS (R6m2|R8|R50)$/',
             SubDirectory => { TagTable => 'Image::ExifTool::Canon::CameraInfoR6m2' },
+        },
+        {
+            Name => 'CanonCameraInfoR6m3',
+            Condition => '$$self{Model} =~ /\bEOS R6 Mark III$/',
+            SubDirectory => { TagTable => 'Image::ExifTool::Canon::CameraInfoR6m3' },
         },
         {
             Name => 'CanonCameraInfoG5XII',
@@ -2159,6 +2192,13 @@ my %offOn = ( 0 => 'Off', 1 => 'On' );
         }
     },
   # 0x4049 - related to croping (forum13491) - "8 0 0 0" = no crop, "8 1 0 1" = crop enabled
+    0x4053 => { #github380
+        Name => 'FocusBracketingInfo',
+        SubDirectory => {
+            Validate => 'Image::ExifTool::Canon::Validate($dirData,$subdirStart,$size)',
+            TagTable => 'Image::ExifTool::Canon::FocusBracketingInfo',
+        }
+    },
     0x4059 => { #forum16111
         Name => 'LevelInfo',
         SubDirectory => {
@@ -2511,8 +2551,11 @@ my %offOn = ( 0 => 'Off', 1 => 'On' );
         PrintConvInv => '$val',
     },
     28 => {
-        Name => 'FlashActivity',
-        RawConv => '$val==-1 ? undef : $val',
+        Name => 'FlashModel', #github390
+        # (don't know what bit 7 is for, but it is set for most models except 1Ds)
+        Mask => 0x7f,
+        RawConv => '$val == 127 ? undef : $val',
+        PrintConv => \%flashModel,
     },
     29 => {
         Name => 'FlashBits',
@@ -3954,6 +3997,7 @@ my %ciMaxFocal = (
         Name => 'HighlightTonePriority',
         PrintConv => \%offOn,
     },
+    0x13 => { Name => 'FlashModel', Mask => 0x7f, PrintConv => \%flashModel }, #github390
     0x1b => { %ciMacroMagnification }, #PH
     0x15 => { #PH (580 EX II)
         Name => 'FlashMeteringMode',
@@ -4037,6 +4081,11 @@ my %ciMaxFocal = (
         Writable => 0, # not writable for logic reasons
         # some firmwares have a null instead of a space after the version number
         RawConv => '$val=~/^\d+\.\d+\.\d+\s*$/ ? $val : undef',
+    },
+    0x18e => { #github397
+        Name => 'OwnerName',
+        Priority => 0,
+        Format => 'string[32]',
     },
     0x1bb => {
         Name => 'FileIndex',
@@ -4772,6 +4821,14 @@ my %ciMaxFocal = (
     NOTES => 'CameraInfo tags for the EOS R5 and R6.',
     # (see forum16111 for more notes on these tags)
     # 0x0a5d - some sort of sequence number starting from 1 (ref forum16111)
+    0x09da => { #github393
+        Name => 'CameraTemperature',
+        Groups => { 2 => 'Camera' },
+        ValueConv => '$val - 128',
+        ValueConvInv => '$val + 128',
+        PrintConv => '"$val C"',
+        PrintConvInv => '$val=~s/ ?C//; $val',
+    },
     0x0af1 => { #forum15210/15579
         Name => 'ShutterCount',
         Format => 'int32u',
@@ -4791,6 +4848,18 @@ my %ciMaxFocal = (
         Name => 'ShutterCount',
         Format => 'int32u',
         Notes => 'includes electronic + mechanical shutter',
+    },
+);
+
+%Image::ExifTool::Canon::CameraInfoR6m3 = (
+    %binaryDataAttrs,
+    FIRST_ENTRY => 0,
+    PRIORITY => 0,
+    GROUPS => { 0 => 'MakerNotes', 2 => 'Camera' },
+    NOTES => 'CameraInfo tags for the EOS R6 Mark II.',
+    0x086d => { #forum17745 (+ private email)
+        Name => 'ImageCount', # (resets to 0 when SD card is formatted)
+        Format => 'int16u',
     },
 );
 
@@ -5561,6 +5630,7 @@ my %ciMaxFocal = (
     0x03 => { %ciFNumber }, #PH
     0x04 => { %ciExposureTime }, #PH
     0x06 => { %ciISO }, #PH
+    0x13 => { Name => 'FlashModel', Mask => 0x7f, PrintConv => \%flashModel }, #github390
     0x15 => { #PH (580 EX II)
         Name => 'FlashMeteringMode',
         PrintConv => {
@@ -6096,6 +6166,11 @@ my %ciMaxFocal = (
         SeparateTable => 'UserDefStyle',
         PrintConv => \%userDefStyles,
     },
+    # location of time stamp (github400)
+    # 0x00ec - 1000D firmware 1.0.7, 40D firmware 1.0.8
+    # 0x01b4 - 5D II firmware 1.0.6 and 1.1.0
+    # 0x01b8 - 5D II firmware 2.1.2
+    # 0x01bc - 7D firmware 2.0.3
 );
 
 # Picture Style information for the 60D, etc (ref 48)
@@ -6275,6 +6350,8 @@ my %ciMaxFocal = (
         SeparateTable => 'UserDefStyle',
         PrintConv => \%userDefStyles,
     },
+    # location of time stamp (github400)
+    # 0x01d0 - 6D firmware 1.1.6, 1D X firmware 2.1.0
 );
 
 # Movie information (MakerNotes tag 0x11) (ref PH)
@@ -7056,6 +7133,8 @@ my %ciMaxFocal = (
             327 => 'Canon RF 20mm F1.4 L VCM', #42
             328 => 'Canon RF 85mm F1.4 L VCM', #42/github350
             330 => 'Canon RF 45mm F1.2 STM', #42
+            331 => 'Canon RF 7-14mm F2.8-3.5 L FISHEYE STM', #42
+            332 => 'Canon RF 14mm F1.4 L VCM', #42
             # Note: add new RF lenses to %canonLensTypes with ID 61182
         },
     },
@@ -7066,9 +7145,17 @@ my %ciMaxFocal = (
     %binaryDataAttrs,
     FIRST_ENTRY => 0,
     GROUPS => { 0 => 'MakerNotes', 2 => 'Camera' },
-    9 => {
+    0 => { #github398 (5DmkII,5DmkIII,5DmkIV,5DS,5DSR)
+        Name => 'InternalSerialNumber2',
+        Format => 'string[9]',
+        Notes => 'could be the number on a barcode sticker of the main circuit board',
+        RawConv => '$val =~ /^\w{6}/ ? $val : undef',
+
+    },
+    9 => { # (other models)
         Name => 'InternalSerialNumber',
         Format => 'string',
+        RawConv => '$val =~ /^\w{6}/ ? $val : undef',
     },
 );
 
@@ -7597,6 +7684,19 @@ my %ciMaxFocal = (
         SubDirectory => { TagTable => 'Image::ExifTool::Canon::ColorCalib' }
     },
     0x0e7 => { Name => 'AverageBlackLevel',     Format => 'int16u[4]' }, #IB
+    0x26b => { #github389
+        Name => 'FlashOutput',
+        ValueConv => '$val >= 255 ? 255 : exp(($val-200)/16*log(2))',
+        ValueConvInv => '$val == 255 ? 255 : 200 + log($val)*16/log(2)',
+        PrintConv => '$val == 255 ? "Strobe or Misfire" : sprintf("%.0f%%", $val * 100)',
+        PrintConvInv => '$val =~ /^(\d(\.?\d*))/ ? $1 / 100 : 255',
+    },
+    0x26c => { #github389
+        Name => 'FlashBatteryLevel',
+        # calibration taken from ColorData3
+        PrintConv => '$val ? sprintf("%.2fV", $val * 5 / 186) : "n/a"',
+        PrintConvInv => '$val=~/^(\d+\.\d+)\s*V?$/i ? int($val*186/5+0.5) : 0',
+    },
     0x280 => { #PH
         Name => 'RawMeasuredRGGB',
         Format => 'int32u[4]',
@@ -8086,6 +8186,19 @@ my %ciMaxFocal = (
         SubDirectory => { TagTable => 'Image::ExifTool::Canon::ColorCalib' }
     },
     0x114 => { Name => 'AverageBlackLevel',     Format => 'int16u[4]' }, #IB
+    0x198 => { #github389
+        Name => 'FlashOutput',
+        ValueConv => '$val >= 255 ? 255 : exp(($val-200)/16*log(2))',
+        ValueConvInv => '$val == 255 ? 255 : 200 + log($val)*16/log(2)',
+        PrintConv => '$val == 255 ? "Strobe or Misfire" : sprintf("%.0f%%", $val * 100)',
+        PrintConvInv => '$val =~ /^(\d(\.?\d*))/ ? $1 / 100 : 255',
+    },
+    0x199 => { #github389
+        Name => 'FlashBatteryLevel',
+        # calibration taken from ColorData3
+        PrintConv => '$val ? sprintf("%.2fV", $val * 5 / 186) : "n/a"',
+        PrintConvInv => '$val=~/^(\d+\.\d+)\s*V?$/i ? int($val*186/5+0.5) : 0',
+    },
     0x1ad => {
         Name => 'RawMeasuredRGGB',
         Condition => '$$self{ColorDataVersion} == 10',
@@ -8541,6 +8654,19 @@ my %ciMaxFocal = (
         Name => 'PerChannelBlackLevel',
         Format => 'int16u[4]',
     },
+    0x299 => { #github389
+        Name => 'FlashOutput',
+        ValueConv => '$val >= 255 ? 255 : exp(($val-200)/16*log(2))',
+        ValueConvInv => '$val == 255 ? 255 : 200 + log($val)*16/log(2)',
+        PrintConv => '$val == 255 ? "Strobe or Misfire" : sprintf("%.0f%%", $val * 100)',
+        PrintConvInv => '$val =~ /^(\d(\.?\d*))/ ? $1 / 100 : 255',
+    },
+    0x29a => { #github389
+        Name => 'FlashBatteryLevel',
+        # calibration taken from ColorData3
+        PrintConv => '$val ? sprintf("%.2fV", $val * 5 / 186) : "n/a"',
+        PrintConvInv => '$val=~/^(\d+\.\d+)\s*V?$/i ? int($val*186/5+0.5) : 0',
+    },
     # 0x326 - PerChannelBlackLevel again
     0x32a => {
         Name => 'NormalWhiteLevel',
@@ -8782,6 +8908,19 @@ my %ciMaxFocal = (
     0x17f => {
         Name => 'PerChannelBlackLevel',
         Format => 'int16u[4]',
+    },
+    0x203 => { #github389
+        Name => 'FlashOutput',
+        ValueConv => '$val >= 255 ? 255 : exp(($val-200)/16*log(2))',
+        ValueConvInv => '$val == 255 ? 255 : 200 + log($val)*16/log(2)',
+        PrintConv => '$val == 255 ? "Strobe or Misfire" : sprintf("%.0f%%", $val * 100)',
+        PrintConvInv => '$val =~ /^(\d(\.?\d*))/ ? $1 / 100 : 255',
+    },
+    0x204 => { #github389
+        Name => 'FlashBatteryLevel',
+        # calibration taken from ColorData3
+        PrintConv => '$val ? sprintf("%.2fV", $val * 5 / 186) : "n/a"',
+        PrintConvInv => '$val=~/^(\d+\.\d+)\s*V?$/i ? int($val*186/5+0.5) : 0',
     },
     # 0x290 - PerChannelBlackLevel again
     0x294 => {
@@ -9375,6 +9514,7 @@ my %filterConv = (
             0 => 'Initial Priority',
             1 => 'On Subject',
             2 => 'Switch Subject',
+            0x7fffffff => 'n/a',
         },
     },
     24 => { #forum16068  #KG extensions for 'left' and 'right'
@@ -9484,6 +9624,33 @@ my %filterConv = (
         PrintConvInv => '$val=~s/\s*mm//;$val',
     },
 
+);
+
+#github380
+%Image::ExifTool::Canon::FocusBracketingInfo = (
+    %binaryDataAttrs,
+    FORMAT => 'int32s',
+    FIRST_ENTRY => 1,
+    GROUPS => { 0 => 'MakerNotes', 2 => 'Camera' },
+    1 => {
+        Name => 'FocusBracketing',
+        PrintConv => \%offOn,
+    },
+    2 => 'FocusBracketingImageCount', # (value: 1-999)
+    3 => 'FocusBracketingFocusIncrement', # (value: 1-10)
+    4 => {
+        Name => 'FocusBracketingExposureSmoothing',
+        PrintConv => \%offOn,
+    },
+    5 => {
+        Name => 'FocusBracketingDepthComposite',
+        PrintConv => \%offOn,
+    },
+    6 => {
+        Name => 'FocusBracketingCropDepthComposite',
+        PrintConv => \%offOn,
+    },
+    7 => 'FocusBracketingFlashInterval', # in seconds
 );
 
 # Canon UUID atoms (ref PH, SX280)
@@ -9675,6 +9842,7 @@ my %filterConv = (
     },
     0x927c => {
         Name => 'MakerNoteCanon',
+        MakerNotes => 1,
         SubDirectory => {
             TagTable => 'Image::ExifTool::Canon::Main',
             ProcessProc => \&Image::ExifTool::ProcessTIFF,
@@ -10030,8 +10198,10 @@ sub PrintLensID(@)
         foreach $lens (@lenses) {
             push @user, $lens if $Image::ExifTool::userLens{$lens};
         }
+        my @tcs = (1, 1.4, 2, 2.8);
+        @tcs = ( $3 ) if $lensModel =~ / \+ ((EXTENDER )?RF)?(\d+(\.\d*)?)x\b/;
         # attempt to determine actual lens
-        foreach $tc (1, 1.4, 2, 2.8) {  # loop through teleconverter scaling factors
+        foreach $tc (@tcs) {  # loop through teleconverter scaling factors
             foreach $lens (@lenses) {
                 next unless $lens =~ /(\d+)(?:-(\d+))?mm.*?(?:[fF]\/?)(\d+(?:\.\d+)?)(?:-(\d+(?:\.\d+)?))?/;
                 # ($1=short focal, $2=long focal, $3=max aperture wide, $4=max aperture tele)
@@ -10046,7 +10216,16 @@ sub PrintLensID(@)
                 }
                 next if abs($shortFocal - $sf * $tc) > 0.9;
                 my $tclens = $lens;
-                $tclens .= " + ${tc}x" if $tc > 1;
+                if ($lens =~ /^(.*) \+ (RF)?(\d+(\.\d*)?)x$/) {
+                    next unless $3 eq $tc;
+                    # remove previous entry if same lens
+                    my $lns = $1;
+                    pop @maybe if @maybe and $maybe[-1] =~ /^$lns/;
+                    pop @likely if @likely and $likely[-1] =~ /^$lns/;
+                    pop @matches if @matches and $matches[-1] =~ /^$lns/;
+                } elsif ($tc > 1) {
+                    $tclens .= " + ${tc}x";
+                }
                 push @maybe, $tclens;
                 next if abs($longFocal  - $lf * $tc) > 0.9;
                 push @likely, $tclens;
@@ -10704,7 +10883,7 @@ Canon maker notes in EXIF information.
 
 =head1 AUTHOR
 
-Copyright 2003-2025, Phil Harvey (philharvey66 at gmail.com)
+Copyright 2003-2026, Phil Harvey (philharvey66 at gmail.com)
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
